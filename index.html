@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones Radicales e Integrales</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Plotly -->
+    <script src="https://cdn.plot.ly/plotly-2.30.0.min.js"></script>
+
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- BOTON MODO OSCURO -->
+    <button id="darkModeBtn" class="dark-btn">
+        <i class="fa-solid fa-moon"></i>
+    </button>
+
+    <!-- MENU -->
+    <header>
+        <nav>
+            <h1>Funciones Radicales</h1>
+
+            <ul>
+                <li><a href="#portada">Inicio</a></li>
+                <li><a href="#introduccion">Introducción</a></li>
+                <li><a href="#definiciones">Definiciones</a></li>
+                <li><a href="#indefinidas">Indefinidas</a></li>
+                <li><a href="#definidas">Definidas</a></li>
+                <li><a href="#riemann">Riemann</a></li>
+                <li><a href="#metodos">Métodos</a></li>
+                <li><a href="#simulador">Simulador</a></li>
+                <li><a href="#cuestionario">Cuestionario</a></li>
+                <li><a href="#equipo">Equipo</a></li>
+                <li><a href="#referencias">Referencias</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- PORTADA -->
+    <section id="portada" class="hero">
+        <div class="hero-content">
+            <h2>Proyecto de Cálculo Integral</h2>
+            <h3>Funciones Radicales</h3>
+
+            <div class="datos">
+                <p><strong>Integrantes:</strong></p>
+                <p>MAGDIEL NAHUM VICENTE ESTRADA</p>
+                <p>FERNANDO COYOTL HUANETL</p>
+                <p>ISABEL LOPEZ ROSAS</p>
+                <p>FLORES MORENO ITAN ABEL</p>
+
+                <br>
+
+                <p><strong>Grupo:</strong> 3B</p>
+                <p><strong>Materia:</strong> Temas Selectos de Matemáticas II</p>
+                <p><strong>Profesor:</strong> Sergio Damian Tacuepian</p>
+                <p><strong>Fecha:</strong> 26 de mayo de 2026</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTRODUCCION -->
+    <section id="introduccion" class="section">
+        <h2>Introducción</h2>
+
+        <p>
+            El cálculo integral es una rama fundamental de las matemáticas
+            encargada del estudio de áreas bajo curvas, acumulación de cantidades
+            y análisis de funciones continuas.
+        </p>
+
+        <br>
+
+        <p>
+            Las funciones radicales contienen raíces cuadradas o cúbicas y son
+            utilizadas en física, geometría, ingeniería y economía.
+        </p>
+
+        <br>
+
+        <p>
+            Esta página tiene como objetivo explicar de manera visual e interactiva
+            los conceptos del cálculo integral aplicados a funciones radicales.
+        </p>
+    </section>
+
+    <!-- DEFINICIONES -->
+    <section id="definiciones" class="section">
+        <h2>Definiciones Importantes</h2>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Integral</h3>
+                <p>Operación matemática utilizada para calcular acumulaciones y áreas.</p>
+            </div>
+
+            <div class="card">
+                <h3>Integral Definida</h3>
+                <p>Integral con límites específicos que produce un valor numérico.</p>
+            </div>
+
+            <div class="card">
+                <h3>Integral Indefinida</h3>
+                <p>Representa una familia de funciones primitivas.</p>
+            </div>
+
+            <div class="card">
+                <h3>Suma de Riemann</h3>
+                <p>Método de aproximación del área mediante rectángulos.</p>
+            </div>
+
+            <div class="card">
+                <h3>Área Bajo la Curva</h3>
+                <p>Región comprendida entre la función y el eje X.</p>
+            </div>
+
+            <div class="card">
+                <h3>Función Integrable</h3>
+                <p>Función que puede calcularse mediante integración.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTEGRALES INDEFINIDAS -->
+    <section id="indefinidas" class="section">
+        <h2>Integrales Indefinidas</h2>
+
+        <h3>Definición</h3>
+        <p>Son integrales sin límites definidos y representan familias de funciones.</p>
+
+        <br>
+
+        <h3>Propiedades</h3>
+        <ul>
+            <li>Linealidad</li>
+            <li>Constante de integración</li>
+            <li>Suma y resta de funciones</li>
+        </ul>
+
+        <br>
+
+        <h3>Ejemplo Resuelto</h3>
+        <div class="example">
+            <p>∫ √x dx</p>
+            <p>= ∫ x^(1/2) dx</p>
+            <p>= (2/3)x^(3/2) + C</p>
+        </div>
+    </section>
+
+    <!-- INTEGRALES DEFINIDAS -->
+    <section id="definidas" class="section">
+        <h2>Integrales Definidas</h2>
+
+        <p>Permiten calcular áreas exactas dentro de un intervalo.</p>
+
+        <br>
+
+        <h3>Aplicaciones</h3>
+        <ul>
+            <li>Física</li>
+            <li>Ingeniería</li>
+            <li>Economía</li>
+            <li>Velocidad y aceleración</li>
+        </ul>
+    </section>
+
+    <!-- RIEMANN -->
+    <section id="riemann" class="section">
+        <h2>Sumas de Riemann</h2>
+
+        <p>
+            Las sumas de Riemann aproximan el área bajo una curva utilizando rectángulos.
+        </p>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Izquierda</h3>
+                <p>Utiliza el extremo izquierdo del intervalo.</p>
+            </div>
+
+            <div class="card">
+                <h3>Derecha</h3>
+                <p>Utiliza el extremo derecho del intervalo.</p>
+            </div>
+
+            <div class="card">
+                <h3>Punto Medio</h3>
+                <p>Usa el punto medio del intervalo.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- METODOS -->
+    <section id="metodos" class="section">
+        <h2>Métodos de Integración</h2>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Integración Directa</h3>
+                <p>Aplicación inmediata de fórmulas.</p>
+            </div>
+
+            <div class="card">
+                <h3>Sustitución</h3>
+                <p>Cambio de variable para simplificar.</p>
+            </div>
+
+            <div class="card">
+                <h3>Integración por Partes</h3>
+                <p>Basada en derivadas de productos.</p>
+            </div>
+
+            <div class="card">
+                <h3>Fracciones Parciales</h3>
+                <p>Divide expresiones racionales complejas.</p>
+            </div>
+
+            <div class="card">
+                <h3>Integrales Trigonométricas</h3>
+                <p>Uso de identidades trigonométricas.</p>
+            </div>
+
+            <div class="card">
+                <h3>Cambio de Variable</h3>
+                <p>Transformación algebraica para facilitar cálculos.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SIMULADOR -->
+    <section id="simulador" class="section">
+        <h2>Simulador Interactivo</h2>
+
+        <div class="controls">
+            <div class="function-box">
+                <label for="functionInput">Función</label>
+                <input
+                    type="text"
+                    id="functionInput"
+                    value="sqrt(x)"
+                    placeholder="Ejemplo: sqrt(x), x^2, sin(x), sqrt(4-x^2)"
+                >
+                <small>
+                    Escribe funciones con x. Puedes usar sqrt, sin, cos, tan, abs, log, exp y potencias con ^.
+                </small>
+            </div>
+
+            <div>
+                <label>Límite inferior</label>
+                <input type="number" id="a" value="0">
+            </div>
+
+            <div>
+                <label>Límite superior</label>
+                <input type="number" id="b" value="2">
+            </div>
+
+            <div>
+                <label>Rectángulos</label>
+                <input type="number" id="n" value="10" min="1">
+            </div>
+
+            <div>
+                <label>Tipo</label>
+                <select id="method">
+                    <option value="left">Izquierda</option>
+                    <option value="right">Derecha</option>
+                    <option value="mid">Punto Medio</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="graph"></div>
+
+        <div class="results">
+            <h3>Resultados</h3>
+            <p id="approx"></p>
+            <p id="real"></p>
+            <p id="error"></p>
+            <p id="functionStatus" class="status"></p>
+
+            <div class="export-buttons">
+                <button id="exportWord" type="button">Exportar a Word</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CUESTIONARIO -->
+    <section id="cuestionario" class="section">
+        <h2>Cuestionario Interactivo</h2>
+
+        <p class="quiz-text">
+            Responde las 5 preguntas. La respuesta correcta se marca en verde y la incorrecta en rojo.
+        </p>
+
+        <div id="quizContainer" class="quiz-container"></div>
+
+        <div class="quiz-footer">
+            <h3 id="quizScore">Puntaje: 0/5</h3>
+            <button id="resetQuiz" type="button">Reiniciar cuestionario</button>
+        </div>
+    </section>
+
+    <!-- EXPLICACIONES DEL EQUIPO -->
+    <section id="equipo" class="section">
+        <h2>Explicaciones Redactadas por el Equipo</h2>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Conclusión del Equipo</h3>
+                <p>
+                    En conclusión, las funciones radicales son importantes en las matemáticas porque permiten modelar
+                    situaciones relacionadas con raíces y potencias, se distinguen por tener restricciones en algunos
+                    casos y por presentar gráficas características que ayudan a comprender el comportamiento de distintas
+                    relaciones matemáticas.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Aprendizajes</h3>
+                <p>
+                    Un aprendizaje importante de este tema es entender que las integrales no solo son operaciones
+                    matemáticas abstractas, sino herramientas que permiten resolver problemas reales relacionados con
+                    áreas, movimiento, velocidad, acumulación y comportamiento de fenómenos físicos.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- REFERENCIAS -->
+    <section id="referencias" class="section">
+        <h2>Referencias APA 7</h2>
+
+        <ol>
+            <li>Stewart, J. (2018). Cálculo de una variable. Cengage Learning.</li>
+            <li>Larson, R. (2014). Cálculo. McGraw-Hill.</li>
+            <li>Leithold, L. (2013). El cálculo. Oxford University Press.</li>
+            <li>Thomas, G. (2010). Cálculo. Pearson Educación.</li>
+            <li>Purcell, E. (2017). Cálculo diferencial e integral. Pearson.</li>
+        </ol>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>Proyecto de Cálculo Integral - 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
